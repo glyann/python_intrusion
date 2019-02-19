@@ -39,8 +39,8 @@ class Encoder_Decoder:
         second = base64.b64encode(first).decode()
         global rot
         rot = codecs.encode(second, 'rot_13')
-        messagebox.showinfo("Information","Voilà ! \n\"" + rot + "\"\n C'est copié dans le presse-papier !")
         clipboard.copy(rot)
+        messagebox.showinfo("Information","Voilà ! \n\"" + rot + "\"\n C'est copié dans le presse-papier !")
 
 
     def decoder(self):
@@ -49,8 +49,8 @@ class Encoder_Decoder:
         second = base64.b64decode(first)
         global rot
         rot = base64.b64decode(second).decode()
-        messagebox.showinfo("Information","Voilà ! \n\"" + rot + "\"\n C'est copié dans le presse-papier !")
         clipboard.copy(rot)
+        messagebox.showinfo("Information","Voilà ! \n\"" + rot + "\"\n C'est copié dans le presse-papier !")
 
     def quitting(self):
         messagebox.showwarning("Error","Application quittée ! ")
